@@ -1,0 +1,579 @@
+/********** Template CSS **********/
+:root {
+    --primary: #2878EB;
+    --secondary: #F14D5D;
+    --light: #fffcf4;
+    --dark: #120F2D;
+}
+
+body{
+    background-color: #fffcf4;
+}
+
+[class^=flaticon-]:before,
+[class*=" flaticon-"]:before,
+[class^=flaticon-]:after,
+[class*=" flaticon-"]:after {
+    font-size: inherit;
+    margin-left: 0;
+}
+
+h1,
+h2,
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+h3,
+h4,
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+h5,
+h6,
+.font-weight-medium {
+    font-weight: 500 !important;
+}
+
+.btn {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-primary:hover,
+.btn-secondary:hover {
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.header_section{
+    background-color: var(--light);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Jost', sans-serif;
+    position: relative;
+    margin-left: 30px;
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (min-width: 992px) {
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 5px;
+        bottom: 0;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+.fixed_company-detail {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+}
+  
+.fixed_company-detail p {
+    width: 12px;
+    text-align: center;
+    word-break: break-word;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(18, 15, 45, .5);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 14px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.carousel-indicators {
+    align-items: flex-end;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 5px;
+    height: 25px;
+}
+
+.carousel-indicators .active {
+    height: 45px;
+}
+
+.hero-header {
+    background: linear-gradient(rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)), url(../img/carousel-1.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+/* service section */
+
+.service_section .container {
+    padding: 0 50px;
+  }
+  
+  .service_detail h2 {
+    text-transform: uppercase;
+    color: #0c0b09;
+    font-weight: bold;
+  }
+  
+  .service_detail h3 {
+    text-transform: uppercase;
+    color: #254a93;
+    position: relative;
+  }
+  
+  .service_detail h3::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 1.5px;
+    width: 45px;
+    background-color: #36bb25;
+  }
+  
+  .service_section .service_img-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+  
+  .service_section .service_img-container .service_img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    height: 325px;
+    background-size: cover;
+  }
+  
+  .service_img-container .service_img-box.i-box-1 {
+    width: 60%;
+    background-image: url(../img/School-Security-Guard-1024x590-1.jpg);
+  }
+  
+  .service_img-container .service_img-box.i-box-2 {
+    width: 40%;
+    background-image: url(../img/house\ keeping.jpeg);
+  }
+  
+  .service_img-container .service_img-box.i-box-3 {
+    width: 40%;
+    background-image: url(../img/cleaning\ services.png);
+  }
+  
+  .service_img-container .service_img-box.i-box-4 {
+    width: 60%;
+    background-image: url(../img/Training-Security.jpg);
+  }
+  
+  .service_section .service_img-container a,
+  .service_section .service_img-container a:hover {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 40px;
+  }
+  
+  .service_section .service_img-container .service_img-box:hover {
+    cursor: pointer;
+  }
+  
+  .service_section .service_img-container .service_img-box:hover a {
+    background-color: #2561db;
+  }
+  
+  .service_btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .service_btn a,
+  .service_btn a:hover {
+    text-transform: uppercase;
+  
+    color: #0c0b09;
+  }
+  
+  .service_btn a img {
+    width: 25px;
+  }
+  
+  /* end service section */
+
+  .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .form-inline .form-check {
+    width: 100%;
+  }
+  @media (min-width: 576px) {
+    .form-inline label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .form-inline .form-group {
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row wrap;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .form-inline .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+    .form-inline .form-control-plaintext {
+      display: inline-block;
+    }
+    .form-inline .input-group,
+    .form-inline .custom-select {
+      width: auto;
+    }
+    .form-inline .form-check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      padding-left: 0;
+    }
+    .form-inline .form-check-input {
+      position: relative;
+      flex-shrink: 0;
+      margin-top: 0;
+      margin-right: 0.25rem;
+      margin-left: 0;
+    }
+    .form-inline .custom-control {
+      align-items: center;
+      justify-content: center;
+    }
+    .form-inline .custom-control-label {
+      margin-bottom: 0;
+    }
+  }
+
+
+    /*----- Clients -----*/
+    #clients {
+    padding-top: 75px;
+    padding-bottom: 85px;
+    }
+    .client {
+    padding: 8px;
+    }
+    .client a {
+    position: relative;
+    display: block;
+    }
+    .client a img {
+    display:block;
+    margin:auto;
+    }
+    .clients .client .logo-dark, 
+    .clients .client a .logo-dark {
+        background: #f9f9f9;
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        -moz-opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        -khtml-opacity: 100;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; 
+    }
+
+    .clients .client .logo-light, 
+    .clients .client a .logo-light {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; 
+    }
+    .clients .client:hover .logo-dark, 
+    .clients .client a:hover .logo-dark {
+        opacity: 0;
+        -moz-opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -khtml-opacity: 0; 
+    }
+
+.bg-offer {
+    background: linear-gradient(rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)), url(../img/carousel-2.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+.contact_form-container {
+  background-image: url(../img/Pelatihan-Gada-Pratama-Security-scaled-1920x960.png);
+}
+
+.contact_form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact_form-container .contact_box {
+  background-color: #fff;
+  padding: 35px 40px;
+  width: 50%;
+  height: 60%;
+  margin: 100px 50px;
+}
+
+.contact_form-container form input,
+.contact_form-container form input:focus,
+.contact_form-container form input:active {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #00cc99;
+  width: 85%;
+  margin-top: 12px;
+  outline: none;
+}
+
+.contact_form-container form button {
+  border: none;
+  background-color: #254a93;
+  color: #fff;
+  padding: 8px 20px;
+  margin-top: 15px;
+}
+
+.contact_section .row .col-md-6 {
+  padding: 0;
+}
+
+/* end contact section */
+
+.brand-carousel {
+	margin: 0;
+}
+.owl-dots {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.owl-dot {
+    display: inline-block;
+    height: 15px !important;
+    width: 15px !important;
+    background-color: #444 !important;
+    opacity: 0.8;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.owl-dot.active {
+	background-color: black !important;
+}
+
+/* info section */
+.layout_padding {
+  padding: 75px 0;
+}
+
+.info_section {
+  background-color: #000202;
+  font-family: "Roboto", sans-serif;
+}
+
+.info_section .info_detail {
+  display: flex;
+  align-items: center;
+}
+
+.info_section .info_detail p {
+  color: #fff;
+}
+
+.address_link-container {
+  display: block;
+}
+
+.address_link-container a {
+  display: flex;
+  color: #fff;
+  margin: 15px 0;
+  align-items: center;
+}
+
+.address_link-container a img {
+  margin-right: 10px;
+}
+
+.info_section .news_container h3,
+.info_section .address_container h3 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 22px;
+}
+
+.info_section .news_container form {
+  margin: 28px 0;
+}
+
+.info_section .news_container form input {
+  border: none;
+  background-color: #fff;
+  width: 70%;
+  padding: 7px 10px;
+}
+
+.info_section .news_container form button {
+  border: none;
+  background-color: #254a93;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.info_section .news_container .social_container {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_section .news_container .social_container > div {
+}
+
+/* end info section */
+
+/* footer section*/
+
+.footer_section {
+  background-color: #254a93;
+  padding: 20px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer_section p {
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.footer_section a {
+  color: #fff;
+}
+
+/* end footer section*/
